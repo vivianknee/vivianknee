@@ -16,15 +16,15 @@
 
 .hero-content {
   display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  gap: 5rem;
+  grid-template-columns: 1fr 0.85fr;
+  gap: 3rem;
   align-items: center;
   width: 100%;
+  padding: 0 80px;
 }
 
 .hero-text {
   animation: fadeInUp 0.8s ease-out 0.3s both;
-  padding-left: 80px;
 }
 
 @keyframes fadeInUp {
@@ -167,6 +167,8 @@
 .hero-image {
   position: relative;
   animation: fadeInRight 0.8s ease-out 0.5s both;
+  max-width: 450px;
+  margin-left: auto;
 }
 
 @keyframes fadeInRight {
@@ -274,15 +276,12 @@
 
 @media (max-width: 1024px) {
   .hero-content {
-    gap: 3rem;
+    gap: 2rem;
+    padding: 0 40px;
   }
 
   .hero-description {
     font-size: 1rem;
-  }
-
-  .hero-text {
-    padding-left: 40px;
   }
 }
 
@@ -291,11 +290,11 @@
     grid-template-columns: 1fr;
     gap: 3rem;
     text-align: center;
+    padding: 0 24px;
   }
 
   .hero-text {
     order: 2;
-    padding-left: 0;
   }
 
   .hero-image {

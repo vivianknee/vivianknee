@@ -2,46 +2,29 @@ import { useState, useEffect } from 'react';
 import './LoadingScreen.css';
 
 const LoadingScreen = ({ onLoadingComplete }) => {
-  const [stage, setStage] = useState('entering'); // entering, revealing, exiting
+  const [isExiting, setIsExiting] = useState(false);
 
   useEffect(() => {
-    // Start revealing after initial entrance
-    const revealTimer = setTimeout(() => {
-      setStage('revealing');
-    }, 1000);
-
-    // Complete loading
+    // Start exit animation after delay
     const exitTimer = setTimeout(() => {
-      setStage('exiting');
+      setIsExiting(true);
       setTimeout(() => {
         onLoadingComplete();
       }, 800);
-    }, 2500);
+    }, 1800);
 
     return () => {
-      clearTimeout(revealTimer);
       clearTimeout(exitTimer);
     };
   }, [onLoadingComplete]);
 
   return (
-    <div className={`loading-screen ${stage}`}>
-      <div className="loading-curtain left">
-        <div className="curtain-pattern"></div>
-      </div>
-      <div className="loading-curtain right">
-        <div className="curtain-pattern"></div>
-      </div>
+    <div className={`loading-screen ${isExiting ? 'exiting' : ''}`}>
+      <div className="loading-background"></div>
       <div className="loading-content">
         <div className="loading-text">
-          <span className="name-initial">V</span>
-          <span className="name-rest">ivian Ni</span>
-        </div>
-        <div className="loading-subtitle">Portfolio 2024</div>
-        <div className="loading-dots">
-          <span></span>
-          <span></span>
-          <span></span>
+          <span className="typed-name">Vivian Ni</span>
+          <span className="cursor">|</span>
         </div>
       </div>
     </div>

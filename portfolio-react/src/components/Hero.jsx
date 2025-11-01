@@ -10,12 +10,8 @@ const Hero = () => {
             <h1 className="hero-name">
               Vivian Ni
             </h1>
-            <div className="hero-tagline">
-              <span className="accent-rust">Frontend Dev</span> &{' '}
-              <span className="accent-olive">UX Enthusiast</span>
-            </div>
             <p className="hero-description">
-              I make things on the internet. Design-focused developer who loves
+              CS @ Columbia Engineering! I make things on the internet. Design-focused developer who loves
               creating experiences that feel good and look even better. Currently
               exploring the messy, beautiful intersection of code and creativity.
             </p>

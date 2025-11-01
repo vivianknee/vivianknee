@@ -61,9 +61,6 @@ const Experience = () => {
       <div className="container">
         <div className="section-header">
           <h2>Professional <span className="accent-olive">Experience</span></h2>
-          <p className="section-subtitle">
-            Building skills through diverse opportunities
-          </p>
         </div>
 
         <div className="timeline">

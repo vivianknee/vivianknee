@@ -46,9 +46,6 @@ const Projects = () => {
       <div className="container">
         <div className="section-header">
           <h2>Featured <span className="accent-rust">Projects</span></h2>
-          <p className="section-subtitle">
-            Technical work that solves real problems
-          </p>
         </div>
 
         <div className="projects-grid">
