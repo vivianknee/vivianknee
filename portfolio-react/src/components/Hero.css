@@ -66,8 +66,17 @@
   font-size: 1.1rem;
   color: var(--coffee);
   line-height: 1.8;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
   max-width: 550px;
+}
+
+.hero-email {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  color: var(--terracotta);
+  font-weight: 600;
+  margin-bottom: 2rem;
+  letter-spacing: 0.02em;
 }
 
 .hero-cta {

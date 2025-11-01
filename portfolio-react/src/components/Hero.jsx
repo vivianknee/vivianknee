@@ -15,6 +15,7 @@ const Hero = () => {
               creating experiences that feel good and look even better. Currently
               exploring the messy, beautiful intersection of code and creativity.
             </p>
+            <p className="hero-email">vivian.ni@columbia.edu</p>
             <div className="hero-cta">
               <a href="#projects" className="btn btn-primary">See My Work</a>
               <a href="#creative" className="btn btn-secondary">
@@ -30,7 +31,7 @@ const Hero = () => {
                 <span>GitHub</span>
               </a>
               <span className="divider">/</span>
-              <a href="/Vivian Ni.pdf" target="_blank" rel="noopener noreferrer" className="social-link">
+              <a href="/Vivian-Ni.pdf" target="_blank" rel="noopener noreferrer" className="social-link">
                 <span>Resume</span>
               </a>
             </div>
