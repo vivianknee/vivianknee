@@ -3,9 +3,8 @@ import './Current.css';
 const Current = () => {
   const currentActivities = [
     {
-      title: "Building Startups",
+      title: "Ludus",
       bullets: [
-        "Working on Perpetua at Columbia Build Lab - a digital will service revolutionizing asset discovery",
         { text: "Building Ludus", url: "https://web.ludusapp.com/", suffix: " - a language study webapp that transforms how students learn and teachers teach" }
       ]
     },
@@ -19,10 +18,9 @@ const Current = () => {
       ],
     },
     {
-      title: "More Coming Soon",
+      title: "Perpetua",
       bullets: [
-        "Always working on something new",
-        "Stay tuned for updates on current projects, interests, and adventures"
+        "Working on Perpetua at Columbia Build Lab - a digital will service revolutionizing asset discovery"
       ]
     }
   ];
@@ -33,7 +31,7 @@ const Current = () => {
         <div className="section-header">
           <h2>What I'm <span className="accent-terracotta">Up To</span></h2>
           <p className="section-subtitle">
-            Current projects, interests, and adventures
+            Current projects, interests, and sidequests
           </p>
         </div>
 
