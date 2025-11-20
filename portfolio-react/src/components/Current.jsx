@@ -3,24 +3,32 @@ import './Current.css';
 const Current = () => {
   const currentActivities = [
     {
+      title: "Research",
+      bullets: [
+        "Exploring computational media and educational interfaces",
+        "Investigating personalized learning systems and human-computer interaction",
+        "Developing innovative approaches to tutorial design and user experience"
+      ]
+    },
+    {
+      title: "Columbia CORE",
+      bullets: [
+        "Organizing and leading CORE's Product Management fellowship",
+        "Working with digital strategy to reach thousands of impressions on the CORE audience",
+        "Building connections with like-minded ambitious people",
+        { text: "Learn more", url: "https://www.instagram.com/coreatcu/" }
+      ],
+    },
+    {
       title: "Ludus",
       bullets: [
         { text: "Building Ludus", url: "https://web.ludusapp.com/", suffix: " - a language study webapp that transforms how students learn and teachers teach" }
       ]
     },
     {
-      title: "Columbia CORE",
-      bullets: [
-        "Meeting like-minded ambitious people",
-        "Building connections and growing together",
-        "Part of an incredible community pushing boundaries and creating impact",
-        { text: "Learn more", url: "https://www.instagram.com/coreatcu/" }
-      ],
-    },
-    {
       title: "Perpetua",
       bullets: [
-        "Working on Perpetua at Columbia Build Lab - a digital will service revolutionizing asset discovery"
+        { prefix: "Working on ", text: "Perpetua", url: "https://withperpetua.com/com/", suffix: " at Columbia Build Lab - a digital will service revolutionizing asset discovery" }
       ]
     }
   ];
@@ -47,6 +55,7 @@ const Current = () => {
                       bullet
                     ) : (
                       <>
+                        {bullet.prefix}
                         <a href={bullet.url} target="_blank" rel="noopener noreferrer" className="activity-link">
                           {bullet.text}
                         </a>

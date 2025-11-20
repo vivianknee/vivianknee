@@ -128,6 +128,26 @@
   line-height: 1.6;
 }
 
+.paper-link {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--terracotta);
+  color: var(--cream);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: 2px solid var(--terracotta);
+  transition: var(--transition);
+}
+
+.paper-link:hover {
+  background: var(--cream);
+  color: var(--terracotta);
+  transform: translateY(-2px);
+  box-shadow: 3px 3px 0 var(--sand);
+}
+
 @media (max-width: 768px) {
   .timeline {
     padding-left: 2rem;

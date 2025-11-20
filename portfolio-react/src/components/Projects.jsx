@@ -3,14 +3,13 @@ import './Projects.css';
 const Projects = () => {
   const projects = [
     {
-      title: "Sorting Algorithm Museum",
-      description: "Interactive learning platform that visualizes complex sorting algorithms through custom animations. Built with Java SpringBoot backend and SQLite database for storing user progress and algorithm analytics.",
-      tech: ["Java", "SpringBoot", "SQLite", "JavaScript", "CSS"],
+      title: "NPO Connect",
+      description: "Built at Columbia DivHacks 2024. Platform connecting volunteers with 150+ NPOs through AI-powered recommendations. Features advanced search, filtering, and personalized matching system.",
+      tech: ["React", "AI/ML", "Database", "UX Design"],
       links: {
-        github: "https://github.com/vivianknee/sorting-algorithm-museum",
-        demo: "https://sorting-algorithm-museum.onrender.com"
+        demo: "https://dorahacks.io/buidl/16997"
       },
-      color: "coral"
+      color: "teal"
     },
     {
       title: "Code Maxxers",
@@ -19,23 +18,15 @@ const Projects = () => {
       links: {
         github: "https://github.com/shanemcandrewai/codeMaxxers"
       },
-      color: "teal"
-    },
-    {
-      title: "Perfect Car Finder",
-      description: "Advanced filtering system for car shopping with Python Flask backend. Features intelligent search algorithms, real-time data processing, and responsive UI. AP CSP capstone project.",
-      tech: ["Python", "Flask", "SQL", "JavaScript", "API"],
-      links: {
-        github: "https://github.com/vivianknee/PerfectCarFinder"
-      },
       color: "coral"
     },
     {
-      title: "NPO Connect",
-      description: "Built at Columbia DivHacks 2024. Platform connecting volunteers with 150+ NPOs through AI-powered recommendations. Features advanced search, filtering, and personalized matching system.",
-      tech: ["React", "AI/ML", "Database", "UX Design"],
+      title: "Sorting Algorithm Museum",
+      description: "Interactive learning platform that visualizes complex sorting algorithms through custom animations. Built with Java SpringBoot backend and SQLite database for storing user progress and algorithm analytics.",
+      tech: ["Java", "SpringBoot", "SQLite", "JavaScript", "CSS"],
       links: {
-        demo: "https://www.youtube.com/watch?v=VQf_RM2Nqj4"
+        github: "https://github.com/vivianknee/sorting-algorithm-museum",
+        demo: "https://sorting-algorithm-museum.onrender.com"
       },
       color: "teal"
     }
@@ -75,7 +66,7 @@ const Projects = () => {
                       <polyline points="15 3 21 3 21 9"></polyline>
                       <line x1="10" y1="14" x2="21" y2="3"></line>
                     </svg>
-                    Live Demo
+                    Read More
                   </a>
                 )}
               </div>

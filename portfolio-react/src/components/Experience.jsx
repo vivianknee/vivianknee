@@ -52,7 +52,21 @@ const Experience = () => {
         "Presented research findings at symposium",
         "Designed user studies comparing traditional vs. custom tutorial learning methods"
       ],
+      paper: "/Examining-Efficacy-Tutorial-Characteristics.pdf",
       color: "coral"
+    },
+    {
+      role: "Participant",
+      company: "Capital One Tech Summit",
+      period: "2026",
+      location: "Hybrid",
+      description: "Selected to attend Capital One's exclusive tech summit featuring technical workshops, networking sessions, and industry insights.",
+      highlights: [
+        "Participating in technical workshops on software engineering and cloud technologies",
+        "Networking with Capital One engineers and tech leaders",
+        "Gaining insights into enterprise-scale software development practices"
+      ],
+      color: "teal"
     }
   ];
 
@@ -85,6 +99,11 @@ const Experience = () => {
                       <li key={i}>{highlight}</li>
                     ))}
                   </ul>
+                  {exp.paper && (
+                    <a href={exp.paper} target="_blank" rel="noopener noreferrer" className="paper-link">
+                      Read Research Paper
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
