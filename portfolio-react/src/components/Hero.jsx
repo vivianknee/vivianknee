@@ -26,7 +26,7 @@ const Hero = () => {
               </a>
             </div>
             <div className="social-links">
-              <a href="https://www.linkedin.com/in/vivian-ni-5ab166253/" target="_blank" rel="noopener noreferrer" className="social-link">
+              <a href="https://www.linkedin.com/in/ni-vivian" target="_blank" rel="noopener noreferrer" className="social-link">
                 <span>LinkedIn</span>
               </a>
               <span className="divider">/</span>
