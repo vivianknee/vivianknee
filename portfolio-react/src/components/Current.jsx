@@ -1,30 +1,31 @@
 import './Current.css';
 
 const Current = () => {
-  const currentActivities = [
+  const columns = [
     {
-      title: "HCI Research",
-      bullets: [
-        "Exploring computational media and educational interfaces",
-        "Investigating personalized learning systems and human-computer interaction",
-        "Developing innovative approaches to tutorial design and user experience"
+      heading: "Work I'm Doing",
+      items: [
+        { bold: "Conduit Commerce", rest: " — leading product design and UX research to rethink the website experience, making the product more intuitive and compelling for new customers" },
+        { bold: "Columbia Graphics and User Interfaces Lab", rest: " — exploring gaussian splatting reconstruction at the intersection of virtual reality and artificial intelligence" },
+        { bold: "CORE (Columbia Organization of Rising Entrepreneurs)", rest: " — running PM fellowship and digital strategy. Organizing guest speakers and facilitating a cohort of 40 students learning product management, while creating content that connects students and entrepreneurs across NYC" },
       ]
     },
     {
-      title: "User Interface and Graphics Lab",
-      bullets: [
-        "Exploring the intersection of gaussian splatting and AI",
-        "Working with tools like unity and Blender for VR/AR applications",
+      heading: "Work I've Done",
+      items: [
+        { bold: "Northrop Grumman", rest: " — designed enterprise software for mission-critical defense systems, automated data verification with Python, and delivered major system upgrades complying with MIL-STD requirements" },
+        { bold: "Perpetua Venture (Columbia Build Lab)", rest: " — co-led AI workflow development for a digital will service, taking end-to-end ownership of ML and LLM system design for asset discovery" },
+        { bold: "Ludus", rest: " — developed the teacher-facing platform for an edtech startup, designing UI/UX in Figma and implementing responsive frontend features in React" },
+        { bold: "computational media research at UCSC", rest: " — developed a personalized learning tutorial add-on for Blender and designed user studies comparing traditional vs. custom tutorial methods" },
       ]
     },
     {
-      title: "Columbia CORE",
-      bullets: [
-        "Organizing and leading CORE's Product Management fellowship",
-        "Working with digital strategy to reach thousands of impressions on the CORE audience",
-        "Building connections with like-minded ambitious people",
-        { text: "Learn more", url: "https://www.instagram.com/coreatcu/" }
-      ],
+      heading: "Work I'm Exploring",
+      items: [
+        { bold: "natural language processing", rest: " — understanding how machines interpret and generate human language, from text classification to sentiment analysis" },
+        { bold: "machine learning and neural networks for social impact", rest: " — applying ML models to social justice projects, education, and civic technology to drive meaningful change" },
+        { bold: "personalized learning systems", rest: " — investigating human-computer interaction patterns that adapt to individual learner needs" },
+      ]
     }
   ];
 
@@ -32,34 +33,20 @@ const Current = () => {
     <section id="creative" className="section">
       <div className="container">
         <div className="section-header">
-          <h2>What I'm <span className="accent-terracotta">Up To</span></h2>
-          <p className="section-subtitle">
-            Current projects, interests, and sidequests
-          </p>
+          <h2><span className="accent-terracotta">Overview</span></h2>
         </div>
 
-        <div className="activities-grid">
-          {currentActivities.map((activity, index) => (
-            <div key={index} className="activity-card">
-              <div className="activity-icon">{activity.icon}</div>
-              <h3>{activity.title}</h3>
-              <ul className="activity-bullets">
-                {activity.bullets.map((bullet, i) => (
+        <div className="current-columns">
+          {columns.map((col, index) => (
+            <div key={index} className="current-column">
+              <h3 className="current-heading">{col.heading}</h3>
+              <ol className="current-list">
+                {col.items.map((item, i) => (
                   <li key={i}>
-                    {typeof bullet === 'string' ? (
-                      bullet
-                    ) : (
-                      <>
-                        {bullet.prefix}
-                        <a href={bullet.url} target="_blank" rel="noopener noreferrer" className="activity-link">
-                          {bullet.text}
-                        </a>
-                        {bullet.suffix}
-                      </>
-                    )}
+                    <strong>{item.bold}</strong>{item.rest}
                   </li>
                 ))}
-              </ul>
+              </ol>
             </div>
           ))}
         </div>

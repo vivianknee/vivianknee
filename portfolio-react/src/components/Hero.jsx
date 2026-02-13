@@ -5,6 +5,9 @@ const Hero = () => {
     <section id="home" className="hero">
       <div className="hero-container">
         <div className="hero-content">
+          <div className="hero-image">
+            <img src="/images/me_optimized.jpg" alt="Vivian Ni" />
+          </div>
           <div className="hero-text">
             <p className="hero-greeting">Hey, I'm</p>
             <h1 className="hero-name">
@@ -19,7 +22,7 @@ const Hero = () => {
             <div className="hero-cta">
               <a href="#projects" className="btn btn-primary">See My Work</a>
               <a href="#creative" className="btn btn-secondary">
-                What I'm Up To →
+                Overview →
               </a>
             </div>
             <div className="social-links">
@@ -36,22 +39,7 @@ const Hero = () => {
               </a>
             </div>
           </div>
-          <div className="hero-image">
-            <div className="image-frame">
-              <div className="frame-corner tl"></div>
-              <div className="frame-corner tr"></div>
-              <div className="frame-corner bl"></div>
-              <div className="frame-corner br"></div>
-              <img src="/images/me.jpeg" alt="Vivian Ni" />
-            </div>
-            <div className="image-scribble"></div>
-          </div>
         </div>
-      </div>
-      <div className="hero-decoration">
-        <svg viewBox="0 0 200 200" className="decoration-blob">
-          <path d="M 50,100 Q 25,25 100,50 T 150,100 Q 175,175 100,150 T 50,100" fill="var(--terracotta)" opacity="0.1"/>
-        </svg>
       </div>
     </section>
   );

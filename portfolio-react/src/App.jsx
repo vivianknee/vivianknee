@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import LoadingScreen from './components/LoadingScreen'
+import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Current from './components/Current'
 import Projects from './components/Projects'
@@ -12,6 +13,7 @@ function App() {
   return (
     <>
       {isLoading && <LoadingScreen onLoadingComplete={() => setIsLoading(false)} />}
+      {!isLoading && <Navbar />}
       <Hero />
       <Current />
       <Projects />
