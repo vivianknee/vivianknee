@@ -14,7 +14,7 @@ const Hero = () => {
               Vivian Ni
             </h1>
             <p className="hero-description">
-              CS @ Columbia Engineering! I make things on the internet. Design-focused developer who loves
+              CS @ Columbia Engineering! Design-focused developer who loves
               creating experiences that feel good and look even better. Currently
               exploring the messy, beautiful intersection of code and creativity.
             </p>

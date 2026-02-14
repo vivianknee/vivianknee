@@ -7,7 +7,7 @@ const Current = () => {
       items: [
         { bold: "Conduit Commerce", rest: " — leading product design and UX research to rethink the website experience, making the product more intuitive and compelling for new customers" },
         { bold: "Columbia Graphics and User Interfaces Lab", rest: " — exploring gaussian splatting reconstruction at the intersection of virtual reality and artificial intelligence" },
-        { bold: "CORE (Columbia Organization of Rising Entrepreneurs)", rest: " — running PM fellowship and digital strategy. Organizing guest speakers and facilitating a cohort of 40 students learning product management, while creating content that connects students and entrepreneurs across NYC" },
+        { bold: "CORE (Columbia Organization of Rising Entrepreneurs)", rest: " — leading the PM fellowship, organizing guest speakers and facilitating a cohort of 40 students learning product management. Member of digital strategy, creating content that connects students and entrepreneurs across NYC" },
       ]
     },
     {
