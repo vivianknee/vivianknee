@@ -1,8 +1,6 @@
 #creative {
   min-height: 100vh;
-  display: flex;
-  align-items: center;
-  padding: 60px 60px;
+  padding: var(--section-padding);
 }
 
 #creative .section-header {
@@ -57,10 +55,6 @@
 }
 
 @media (max-width: 1024px) {
-  #creative {
-    padding: 60px 40px;
-  }
-
   .current-columns {
     grid-template-columns: repeat(2, 1fr);
     gap: 2.5rem;
@@ -68,18 +62,9 @@
 }
 
 @media (max-width: 768px) {
-  #creative {
-    padding: 60px 24px;
-  }
-
   .current-columns {
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
 }
 
-@media (max-width: 480px) {
-  #creative {
-    padding: 40px 20px;
-  }
-}

@@ -1,3 +1,7 @@
+#experience {
+  min-height: 100vh;
+}
+
 .timeline {
   position: relative;
   padding-left: 3rem;

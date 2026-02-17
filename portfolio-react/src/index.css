@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Karla:wght@400;500;600;700&family=Courier+Prime:wght@400;700&display=swap');
-
 :root {
   /* Indie Color Palette - warm, earthy, organic */
   --cream: #F5F1E8;
@@ -19,7 +17,7 @@
   --font-mono: 'Courier Prime', monospace;
 
   /* Spacing */
-  --section-padding: 100px 60px;
+  --section-padding: 45px 60px;
   --container-max: 1600px;
 
   /* Animation */
@@ -34,6 +32,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 60px;
 }
 
 body {
