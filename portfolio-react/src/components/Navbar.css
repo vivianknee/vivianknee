@@ -1,0 +1,38 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  padding: 1.5rem 2rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: var(--coffee);
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: var(--terracotta);
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 1rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+
+  .nav-links a {
+    font-size: 0.8rem;
+  }
+}
