@@ -1,3 +1,4 @@
+/* ===== Section ===== */
 .section {
   background: var(--cream);
 }
@@ -12,173 +13,291 @@
   display: inline-block;
 }
 
-.section-subtitle {
-  font-size: 1.1rem;
-  color: var(--coffee);
-  max-width: 600px;
-  margin: 0 auto;
-  font-weight: 500;
+/* ===== Card Stack Container ===== */
+.card-stack {
+  position: relative;
+  height: 480px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
 }
 
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-  gap: 2.5rem;
-}
-
-.project-card {
+/* ===== Individual Cards ===== */
+.card-stack__card {
+  position: absolute;
+  width: min(480px, 80vw);
+  height: 420px;
   background: var(--warm-white);
   border: 2px solid var(--sand);
-  padding: 2.5rem;
-  position: relative;
+  border-radius: 12px;
+  padding: 2rem;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: calc(3 - var(--card-index));
+  outline: none;
   overflow: hidden;
-  transition: var(--transition);
 }
 
-.project-card::before {
+/* Top accent bar */
+.card-stack__card::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 4px;
-  background: var(--terracotta);
+  background: var(--matcha);
+  border-radius: 12px 12px 0 0;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.5s ease;
 }
 
-.project-card::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 60px;
-  height: 60px;
-  border-right: 3px solid var(--rust);
-  border-bottom: 3px solid var(--rust);
-  opacity: 0;
-  transition: opacity 0.3s ease;
+/* ===== Stacked State (default) ===== */
+.card-stack__card:nth-child(1) {
+  transform: translate(-30px, 0) rotate(-1deg);
 }
 
-.project-card:hover {
-  transform: translateY(-5px);
-  border-color: var(--terracotta);
-  box-shadow: 8px 8px 0 var(--sand);
+.card-stack__card:nth-child(2) {
+  transform: translate(0, 0) rotate(0.5deg);
 }
 
-.project-card:hover::before {
+.card-stack__card:nth-child(3) {
+  transform: translate(30px, 0) rotate(1.5deg);
+}
+
+/* ===== Fan Out on Stack Hover ===== */
+.card-stack:hover .card-stack__card:nth-child(1),
+.card-stack:focus-within .card-stack__card:nth-child(1) {
+  transform: translate(calc(-100% - 20px), 0) rotate(0deg);
+}
+
+.card-stack:hover .card-stack__card:nth-child(2),
+.card-stack:focus-within .card-stack__card:nth-child(2) {
+  transform: translate(0, 0) rotate(0deg);
+}
+
+.card-stack:hover .card-stack__card:nth-child(3),
+.card-stack:focus-within .card-stack__card:nth-child(3) {
+  transform: translate(calc(100% + 20px), 0) rotate(0deg);
+}
+
+/* ===== Individual Card Hover (when fanned) ===== */
+.card-stack:hover .card-stack__card:hover,
+.card-stack:focus-within .card-stack__card:focus {
+  z-index: 10;
+  border-color: var(--matcha);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.card-stack:hover .card-stack__card:hover::before,
+.card-stack:focus-within .card-stack__card:focus::before {
   transform: scaleX(1);
 }
 
-.project-card:hover::after {
-  opacity: 0.3;
-}
-
-.project-number {
-  font-size: 5rem;
-  font-weight: 400;
-  font-family: var(--font-display);
-  font-style: italic;
-  color: var(--sand);
+/* ===== Card Badge ===== */
+.card-badge {
   position: absolute;
-  top: 0.5rem;
-  right: 1.5rem;
-  line-height: 1;
-  z-index: 0;
+  top: 12px;
+  left: 12px;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  z-index: 3;
 }
 
-.project-card h3 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  color: var(--ink);
+.card-badge.project {
+  background: var(--sand);
+  color: var(--coffee);
+}
+
+.card-badge.hackathon {
+  background: var(--matcha-light);
+  color: var(--matcha-dark);
+}
+
+.card-badge.winner {
+  background: var(--matcha-dark);
+  color: var(--cream);
+}
+
+/* ===== Card Front (always visible) ===== */
+.card-front {
   position: relative;
   z-index: 1;
 }
 
-.project-description {
-  color: var(--coffee);
-  line-height: 1.7;
-  margin-bottom: 1.5rem;
+.card-front h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.3rem;
+  color: var(--ink);
 }
 
+.project-tagline {
+  color: var(--coffee);
+  font-size: 0.8rem;
+  line-height: 1.5;
+  font-family: var(--font-mono);
+}
+
+/* ===== Card Details (always visible) ===== */
+.card-details {
+  margin-top: 0.75rem;
+}
+
+.card-details__inner {
+  overflow: hidden;
+}
+
+/* ===== Tech Tags ===== */
 .tech-stack {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-bottom: 1.5rem;
+  gap: 0.5rem;
 }
 
 .tech-tag {
-  padding: 0.4rem 0.9rem;
+  padding: 0.3rem 0.7rem;
   background: transparent;
-  color: var(--rust);
+  color: var(--matcha-dark);
   border: 1.5px solid var(--sand);
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   font-weight: 600;
   font-family: var(--font-mono);
   transition: var(--transition);
 }
 
 .tech-tag:hover {
-  background: var(--rust);
+  background: var(--matcha-dark);
   color: var(--cream);
-  border-color: var(--rust);
+  border-color: var(--matcha-dark);
 }
 
-.project-links {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
 
-.project-link {
+/* ===== Project Image Placeholder ===== */
+.project-image {
+  position: relative;
+  width: 100%;
+  height: 120px;
+  background: var(--sand);
+  border-radius: 8px;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.7rem 1.2rem;
-  background: transparent;
-  color: var(--charcoal);
-  font-size: 0.9rem;
-  font-weight: 600;
-  transition: var(--transition);
-  border: 2px solid var(--charcoal);
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.project-image-placeholder {
+  color: var(--coffee);
   font-family: var(--font-mono);
+  font-size: 0.8rem;
+  opacity: 0.5;
 }
 
-.project-link svg {
-  width: 16px;
-  height: 16px;
+/* ===== Circular Icon Links on Image ===== */
+.project-image-links {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  gap: 6px;
+  z-index: 2;
 }
 
-.project-link:hover {
+.image-link {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--warm-white);
+  border: 1.5px solid var(--sand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--charcoal);
+  transition: var(--transition);
+}
+
+.image-link svg {
+  width: 14px;
+  height: 14px;
+}
+
+.image-link:hover {
   background: var(--charcoal);
   color: var(--cream);
-  transform: translateX(3px);
+  border-color: var(--charcoal);
 }
 
+/* ===== Responsive: Tablet ===== */
 @media (max-width: 1024px) {
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 768px) {
-  .project-card {
-    padding: 2rem;
-  }
-
-  .project-number {
-    font-size: 3.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .project-card {
+  .card-stack__card {
+    width: min(360px, 80vw);
     padding: 1.5rem;
   }
 
-  .project-card h3 {
+  .card-stack:hover .card-stack__card:nth-child(1),
+  .card-stack:focus-within .card-stack__card:nth-child(1) {
+    transform: translate(calc(-100% - 10px), 0) rotate(0deg);
+  }
+
+  .card-stack:hover .card-stack__card:nth-child(3),
+  .card-stack:focus-within .card-stack__card:nth-child(3) {
+    transform: translate(calc(100% + 10px), 0) rotate(0deg);
+  }
+}
+
+/* ===== Responsive: Mobile ===== */
+@media (max-width: 768px) {
+  .card-stack {
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    padding: 0;
+  }
+
+  .card-stack__card {
+    position: relative;
+    width: 100%;
+    height: auto;
+    transform: none !important;
+    z-index: auto;
+  }
+
+  .card-stack__card:hover,
+  .card-stack__card:focus {
+    transform: none !important;
+    border-color: var(--matcha);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  }
+
+  .card-stack__card:hover::before,
+  .card-stack__card:focus::before {
+    transform: scaleX(1);
+  }
+}
+
+/* ===== Responsive: Small Mobile ===== */
+@media (max-width: 480px) {
+  .card-stack__card {
+    padding: 1.5rem;
+  }
+
+  .card-front h3 {
     font-size: 1.5rem;
   }
 

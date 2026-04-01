@@ -33,7 +33,7 @@ const Current = () => {
     <section id="creative" className="section">
       <div className="container">
         <div className="section-header">
-          <h2><span className="accent-terracotta">Overview</span></h2>
+          <h2><span className="accent-matcha">Overview</span></h2>
         </div>
 
         <div className="current-columns">

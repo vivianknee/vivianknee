@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Agentation } from 'agentation'
 import LoadingScreen from './components/LoadingScreen'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
@@ -18,6 +19,14 @@ function App() {
       <Current />
       <Projects />
       <Experience />
+      {process.env.NODE_ENV === "development" && (
+        <Agentation
+          endpoint="http://localhost:4747"
+          onSessionCreated={(sessionId) => {
+            console.log("Session started:", sessionId);
+          }}
+        />
+      )}
     </>
   )
 }

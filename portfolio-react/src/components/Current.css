@@ -43,7 +43,7 @@
 .current-link {
   display: inline-block;
   margin-top: 1rem;
-  color: var(--terracotta);
+  color: var(--matcha-dark);
   font-weight: 600;
   font-size: 0.9rem;
   font-family: var(--font-mono);
@@ -51,7 +51,7 @@
 }
 
 .current-link:hover {
-  color: var(--rust);
+  color: var(--matcha);
 }
 
 @media (max-width: 1024px) {

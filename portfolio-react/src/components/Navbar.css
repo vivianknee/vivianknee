@@ -20,7 +20,7 @@
 }
 
 .nav-links a:hover {
-  color: var(--terracotta);
+  color: var(--matcha-dark);
 }
 
 @media (max-width: 480px) {

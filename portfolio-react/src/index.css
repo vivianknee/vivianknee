@@ -3,18 +3,19 @@
   --cream: #F5F1E8;
   --warm-white: #FFF9F0;
   --sand: #E8DCC4;
-  --terracotta: #D67854;
-  --rust: #A64B2A;
+  --matcha: #8AAE68;
+  --matcha-dark: #5B7A3A;
+  --matcha-light: #D4E4C8;
   --olive: #8B9556;
   --sage: #B5BFA0;
   --charcoal: #2C2C2C;
   --ink: #1A1A1A;
   --coffee: #6B5449;
 
-  /* Typography - more artistic and raw */
-  --font-display: 'DM Serif Display', serif;
-  --font-body: 'Karla', sans-serif;
-  --font-mono: 'Courier Prime', monospace;
+  /* Typography */
+  --font-display: 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'Plus Jakarta Sans', sans-serif;
 
   /* Spacing */
   --section-padding: 45px 60px;
@@ -44,7 +45,7 @@ body {
   position: relative;
 }
 
-/* Film grain texture overlay */
+/* Dot grid background */
 body::before {
   content: '';
   position: fixed;
@@ -52,31 +53,15 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image:
-    repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,.03) 2px, rgba(0,0,0,.03) 4px),
-    repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(0,0,0,.03) 2px, rgba(0,0,0,.03) 4px);
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.12) 1px, transparent 1px);
+  background-size: 28px 28px;
   pointer-events: none;
   z-index: 9999;
-  opacity: 0.4;
-  animation: grain 8s steps(10) infinite;
-}
-
-@keyframes grain {
-  0%, 100% { transform: translate(0, 0); }
-  10% { transform: translate(-5%, -10%); }
-  20% { transform: translate(-15%, 5%); }
-  30% { transform: translate(7%, -25%); }
-  40% { transform: translate(-5%, 25%); }
-  50% { transform: translate(-15%, 10%); }
-  60% { transform: translate(15%, 0%); }
-  70% { transform: translate(0%, 15%); }
-  80% { transform: translate(3%, 35%); }
-  90% { transform: translate(-10%, 10%); }
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.02em;
 }
@@ -84,11 +69,11 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: clamp(3rem, 10vw, 7rem);
   margin-bottom: 1rem;
-  font-style: italic;
+  font-weight: 800;
 }
 
 h2 {
-  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-size: clamp(2rem, 4.5vw, 3rem);
   margin-bottom: 1.5rem;
 }
 
@@ -152,23 +137,23 @@ button {
   left: -5px;
   right: -5px;
   height: 8px;
-  background: var(--terracotta);
+  background: var(--matcha);
   opacity: 0.3;
   transform: rotate(-0.5deg);
   z-index: -1;
 }
 
 /* Accent colors */
-.accent-terracotta {
-  color: var(--terracotta);
+.accent-matcha {
+  color: var(--matcha);
 }
 
 .accent-olive {
   color: var(--olive);
 }
 
-.accent-rust {
-  color: var(--rust);
+.accent-matcha-dark {
+  color: var(--matcha-dark);
 }
 
 /* Utility classes */
