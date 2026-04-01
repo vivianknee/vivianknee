@@ -143,6 +143,24 @@
   color: var(--matcha-dark);
 }
 
+/* ===== Company Logo ===== */
+.exp-card__logo {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid var(--sand);
+  opacity: 0.7;
+  transition: var(--transition);
+}
+
+.exp-card:hover .exp-card__logo {
+  opacity: 1;
+}
+
 /* ===== Responsive: Mobile ===== */
 @media (max-width: 768px) {
   .exp-card-stack {

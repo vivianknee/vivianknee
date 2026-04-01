@@ -29,6 +29,7 @@ const Experience = () => {
       company: "Northrop Grumman Mission Systems",
       period: "Jun 2025 - Aug 2025",
       location: "San Diego, CA",
+      logo: "/images/ng.jpg",
       description: "Designed enterprise software for mission-critical defense systems.",
       highlights: [
         "Created Java-based frontend integrated into core C2 software",
@@ -40,6 +41,7 @@ const Experience = () => {
       company: "Northrop Grumman Mission Systems",
       period: "Jun 2024 - Aug 2024",
       location: "San Diego, CA",
+      logo: "/images/ng.jpg",
       description: "Contributed to major system upgrades and legacy code optimization.",
       highlights: [
         "Automated data integrity verification using Python Pandas",
@@ -51,6 +53,7 @@ const Experience = () => {
       company: "Science Internship Program at UCSC",
       period: "Jun 2023 - Aug 2023",
       location: "Santa Cruz, CA",
+      logo: "/images/sip.jpg",
       description: "Collaborated with UCSC faculty on computational media research.",
       highlights: [
         "Developed personalized learning tutorial add-on for Blender using Python",
@@ -95,6 +98,9 @@ const Experience = () => {
                 <a href={exp.paper} target="_blank" rel="noopener noreferrer" className="exp-card__paper">
                   Read Paper
                 </a>
+              )}
+              {exp.logo && (
+                <img src={exp.logo} alt={exp.company} className="exp-card__logo" />
               )}
             </div>
           ))}
