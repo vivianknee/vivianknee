@@ -25,6 +25,17 @@ const Projects = () => {
       }
     },
     {
+      title: "Pocket Therapist",
+      tagline: "Emotion-detecting wellness app with AI chatbot",
+      tech: ["Java", "SpringBoot", "SQLite", "face-api.js", "Jekyll"],
+      type: "project",
+      image: "/images/pockettherapist.png",
+      links: {
+        github: "https://github.com/vivianknee/PocketTherapist",
+        demo: "https://vivianknee.github.io/PocketTherapist/"
+      }
+    },
+    {
       title: "Sorting Algorithm Museum",
       tagline: "Interactive sorting algorithm visualizer",
       tech: ["Java", "SpringBoot", "SQLite", "JavaScript", "CSS"],
