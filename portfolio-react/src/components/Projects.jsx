@@ -9,6 +9,7 @@ const Projects = () => {
       type: "hackathon",
       award: "1st Place",
       image: "/images/stencil_logo.png",
+      imagePosition: "center 36%",
       links: {
         youtube: "https://www.youtube.com/watch?v=Vn4V_VhvMRA&list=LL&index=1"
       }
@@ -41,7 +42,7 @@ const Projects = () => {
       tech: ["Java", "SpringBoot", "SQLite", "face-api.js", "Jekyll"],
       type: "project",
       image: "/images/pockettherapist.png",
-      imagePosition: "center 45%",
+      imagePosition: "center 47%",
       links: {
         github: "https://github.com/vivianknee/PocketTherapist",
         demo: "https://vivianknee.github.io/PocketTherapist/"
