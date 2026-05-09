@@ -13,6 +13,14 @@
   display: inline-block;
 }
 
+.section-subheader {
+  font-size: 0.8rem;
+  font-family: var(--font-mono);
+  color: var(--coffee);
+  opacity: 0.7;
+  margin-top: 0.4rem;
+}
+
 /* ===== Card Stack Container ===== */
 .card-stack {
   position: relative;
@@ -143,6 +151,14 @@
   font-size: 0.8rem;
   line-height: 1.5;
   font-family: var(--font-mono);
+}
+
+.project-description {
+  color: var(--coffee);
+  font-size: 0.78rem;
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+  opacity: 0.85;
 }
 
 /* ===== Card Details (always visible) ===== */

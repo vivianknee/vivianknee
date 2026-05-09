@@ -3,6 +3,17 @@ import './Experience.css';
 const Experience = () => {
   const experiences = [
     {
+      role: "Product Design & UX Research",
+      company: "Conduit Commerce",
+      period: "2025 - Present",
+      location: "Remote",
+      description: "Conduit is led by a Forbes 30 Under 30 founder. Contributing to product design and UX research to rethink the website experience, making the product more intuitive and compelling for new customers.",
+      highlights: [
+        "Redesigning end-to-end user flows to reduce friction for first-time customers",
+        "Conducting UX research to surface pain points and inform product direction"
+      ]
+    },
+    {
       role: "Software Engineer",
       company: "Ludus",
       period: "Nov 2025 - Jan 2026",

@@ -3,6 +3,14 @@ import './Projects.css';
 const Projects = () => {
   const projects = [
     {
+      title: "Stencil",
+      tagline: "1st Place, EEG / CORE Hackathon — prompt-to-product branding engine",
+      tech: ["Next.js 14", "FastAPI", "GPT-4o", "Stable Diffusion", "Apify", "Redis", "Supabase", "Stripe Connect"],
+      type: "hackathon",
+      award: "1st Place",
+      links: {}
+    },
+    {
       title: "Second Self",
       tagline: "1st Place, YHack @ Yale — AI digital twin agent",
       tech: ["Claude Agents SDK", "Swift", "SwiftUI", "ElevenLabs", "VNC", "Browser-Use"],
@@ -53,6 +61,7 @@ const Projects = () => {
       <div className="container">
         <div className="section-header">
           <h2>Hackathons & <span className="accent-matcha">Projects</span></h2>
+          <p className="section-subheader">2x hackathon winner</p>
         </div>
 
         <div className="card-stack">
@@ -114,6 +123,9 @@ const Projects = () => {
 
               <div className="card-details">
                 <div className="card-details__inner">
+                  {project.description && (
+                    <p className="project-description">{project.description}</p>
+                  )}
                   <div className="tech-stack">
                     {project.tech.map((tech, i) => (
                       <span key={i} className="tech-tag">{tech}</span>
