@@ -8,6 +8,7 @@ const Projects = () => {
       tech: ["Next.js 14", "FastAPI", "GPT-4o", "Stable Diffusion", "Apify", "Redis", "Supabase", "Stripe Connect"],
       type: "hackathon",
       award: "1st Place",
+      image: "/images/stencil_logo.png",
       links: {
         youtube: "https://www.youtube.com/watch?v=Vn4V_VhvMRA&list=LL&index=1"
       }
